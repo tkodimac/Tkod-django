@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'subscriptions',
+    'plans',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -124,9 +128,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INSTALLED_APPS = [
-    # ... other default apps ...
-    'users',
-    'subscriptions',
-    # ... other apps ...
-]
+AUTH_USER_MODEL = 'users.User'  # This tells Django to use your custom User model
+
